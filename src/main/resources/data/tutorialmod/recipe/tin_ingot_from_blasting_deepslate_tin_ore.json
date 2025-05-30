@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.5,
+  "group": "tin_ingot",
+  "ingredient": {
+    "item": "tutorialmod:deepslate_tin_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:tin_ingot"
+  }
+}

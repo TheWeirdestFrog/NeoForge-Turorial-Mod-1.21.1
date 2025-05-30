@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "tutorialmod:tin_ingot"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BBB",
+    "BBB"
+  ],
+
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:tin_block"
+  }
+
+}

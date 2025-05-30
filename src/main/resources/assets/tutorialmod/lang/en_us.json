@@ -1,7 +1,11 @@
 {
+ "creativetab.tutorialmod.tutorial_items": "Tutorial Items",
+ "creativetab.tutorialmod.tutorial_blocks": "Tutorial Blocks",
+
  "item.tutorialmod.tin_ingot": "Tin Ingot",
  "item.tutorialmod.raw_tin": "Raw Tin",
 
  "block.tutorialmod.tin_block": "Block of Tin",
- "block.tutorialmod.tin_ore": "Tin Ore"
+ "block.tutorialmod.tin_ore": "Tin Ore",
+ "block.tutorialmod.deepslate_tin_ore": "Deepslate Tin Ore"
 }
