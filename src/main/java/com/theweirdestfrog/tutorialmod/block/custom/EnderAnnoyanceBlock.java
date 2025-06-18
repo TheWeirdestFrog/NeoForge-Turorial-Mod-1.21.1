@@ -31,8 +31,11 @@ public class EnderAnnoyanceBlock extends Block {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        level.playSound(player, pos, SoundEvents.ENDER_DRAGON_DEATH, SoundSource.BLOCKS, 1f, 1f);
-        player.move(MoverType.PLAYER, new Vec3(1.0, 1.0, 1.0));
+        level.playSound(player, pos, SoundEvents.PLAYER_TELEPORT, SoundSource.BLOCKS, 1f, 1f);
+        Vec3 lookVec = player.getLookAngle();
+        double distance = 3;
+        Vec3 scaledVac = lookVec.scale(distance);
+        player.move(MoverType.PLAYER, scaledVac);
         player.addItem(new ItemStack(ModItems.RAW_TIN.get(), 5));
         return InteractionResult.SUCCESS;
     }
@@ -43,23 +46,15 @@ public class EnderAnnoyanceBlock extends Block {
             if(itemEntity.getItem().getItem() == ModItems.TIN_INGOT.get()) {
                 itemEntity.setItem(new ItemStack(Items.ACACIA_DOOR, itemEntity.getItem().getCount()));
             }
-        } else {
-            entity.move(MoverType.SELF, new Vec3(0, 5, 0));
-        }
+        } else if (entity instanceof ItemEntity itemEntity){
+            if(itemEntity.getItem().getItem() == Items.ACACIA_DOOR) {
+
+            }
+        } else entity.move(MoverType.PLAYER, new Vec3(0, 5, 0));
 
 
         super.stepOn(level, pos, state, entity);
     }
 
-    @Override
-    protected void neighborChanged(BlockState state, Level level, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
-        boolean flag = level.hasNeighborSignal(pos);
-        if (flag != state.getValue(POWERED)) {
-            if (flag) {
-                level.playSound(null, pos, SoundEvents.ENDER_DRAGON_DEATH, SoundSource.BLOCKS, 1, 1);
-            }
 
-            level.setBlock(pos, state.setValue(POWERED, Boolean.valueOf(flag)), 3);
-        }
-    }
 }

@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "B": {
-      "item": "minecraft:endstone"
+      "item": "minecraft:end_stone"
     },
     "A": {
-      "item": "minecraft:ender_dragon_head"
+      "item": "minecraft:dragon_head"
     },
     "C": {
-      "item": "minecraft:redstone_dust"
+      "item": "minecraft:redstone"
     }
 
   },
