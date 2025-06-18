@@ -1,6 +1,8 @@
 package com.theweirdestfrog.tutorialmod.item;
 
 import com.theweirdestfrog.tutorialmod.TutorialMod;
+import com.theweirdestfrog.tutorialmod.item.custom.ChiselItem;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.world.damagesource.DamageEffects;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -15,6 +17,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> RAW_TIN = ITEMS.register("raw_tin",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(new Item.Properties().durability(64)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

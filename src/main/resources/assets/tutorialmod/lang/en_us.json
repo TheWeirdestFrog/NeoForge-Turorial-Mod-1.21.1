@@ -4,8 +4,11 @@
 
  "item.tutorialmod.tin_ingot": "Tin Ingot",
  "item.tutorialmod.raw_tin": "Raw Tin",
+ "item.tutorialmod.chisel": "Chisel",
 
  "block.tutorialmod.tin_block": "Block of Tin",
  "block.tutorialmod.tin_ore": "Tin Ore",
- "block.tutorialmod.deepslate_tin_ore": "Deepslate Tin Ore"
+ "block.tutorialmod.deepslate_tin_ore": "Deepslate Tin Ore",
+ "block.tutorialmod.raw_tin_block": "Block of Raw Tin",
+ "block.tutorialmod.ender_annoyance": "Ender Annoyance"
 }

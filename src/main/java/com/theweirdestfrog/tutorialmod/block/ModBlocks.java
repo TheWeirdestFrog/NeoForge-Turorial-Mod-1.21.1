@@ -1,6 +1,7 @@
 package com.theweirdestfrog.tutorialmod.block;
 
 import com.theweirdestfrog.tutorialmod.TutorialMod;
+import com.theweirdestfrog.tutorialmod.block.custom.EnderAnnoyanceBlock;
 import com.theweirdestfrog.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -32,7 +33,12 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of()
                     .strength(4.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final DeferredBlock<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<Block> ENDER_ANNOYANCE = registerBlock("ender_annoyance",
+            () -> new EnderAnnoyanceBlock(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.STONE)));
 
 
     private static<T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

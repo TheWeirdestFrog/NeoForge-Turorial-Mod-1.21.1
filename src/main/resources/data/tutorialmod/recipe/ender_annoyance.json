@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:endstone"
+    },
+    "A": {
+      "item": "minecraft:ender_dragon_head"
+    },
+    "C": {
+      "item": "minecraft:redstone_dust"
+    }
+
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BCB"
+  ],
+
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:ender_annoyance"
+  }
+
+}

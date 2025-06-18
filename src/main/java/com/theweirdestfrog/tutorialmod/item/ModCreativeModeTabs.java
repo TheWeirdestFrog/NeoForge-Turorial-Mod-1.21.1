@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TIN_INGOT);
                         output.accept(ModItems.RAW_TIN);
+                        output.accept(ModItems.CHISEL);
                     }).build());
 
 
@@ -34,6 +35,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TIN_BLOCK);
                         output.accept(ModBlocks.TIN_ORE);
                         output.accept(ModBlocks.DEEPSLATE_TIN_ORE);
+                        output.accept(ModBlocks.RAW_TIN_BLOCK);
+                        output.accept(ModBlocks.ENDER_ANNOYANCE);
                     }).build());
 
 
