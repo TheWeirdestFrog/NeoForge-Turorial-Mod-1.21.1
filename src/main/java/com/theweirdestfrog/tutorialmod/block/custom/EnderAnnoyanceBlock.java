@@ -46,11 +46,13 @@ public class EnderAnnoyanceBlock extends Block {
             if(itemEntity.getItem().getItem() == ModItems.TIN_INGOT.get()) {
                 itemEntity.setItem(new ItemStack(Items.ACACIA_DOOR, itemEntity.getItem().getCount()));
             }
-        } else if (entity instanceof ItemEntity itemEntity){
+        } else if (entity instanceof ItemEntity itemEntity) {
             if(itemEntity.getItem().getItem() == Items.ACACIA_DOOR) {
 
             }
-        } else entity.move(MoverType.PLAYER, new Vec3(0, 5, 0));
+        } else if (!entity.isSteppingCarefully()) {
+            entity.move(MoverType.PLAYER, new Vec3(0, 5, 0));
+        }
 
 
         super.stepOn(level, pos, state, entity);

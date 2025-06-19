@@ -24,6 +24,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TIN_INGOT);
                         output.accept(ModItems.RAW_TIN);
                         output.accept(ModItems.CHISEL);
+                        output.accept(ModItems.GOLDEN_POTATO);
+                        output.accept(ModItems.BLAZE_COAL);
+                        output.accept(ModItems.SOUL_FIRE_CHARGE);
                     }).build());
 
 

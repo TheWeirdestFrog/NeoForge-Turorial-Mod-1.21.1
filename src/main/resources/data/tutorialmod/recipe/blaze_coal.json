@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "A": {
+      "item": "minecraft:coal"
+    }
+
+  },
+  "pattern": [
+    "ABA",
+    "BAB",
+    "ABA"
+  ],
+
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:golden_potato"
+  }
+
+}
