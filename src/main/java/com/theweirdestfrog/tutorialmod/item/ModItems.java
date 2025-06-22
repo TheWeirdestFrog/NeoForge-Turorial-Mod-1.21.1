@@ -4,12 +4,17 @@ import com.theweirdestfrog.tutorialmod.TutorialMod;
 import com.theweirdestfrog.tutorialmod.item.custom.ChiselItem;
 import com.theweirdestfrog.tutorialmod.item.custom.FuelItem;
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageEffects;
 import net.minecraft.world.item.FireChargeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
@@ -24,7 +29,13 @@ public class ModItems {
             () -> new ChiselItem(new Item.Properties().durability(64)));
 
     public static final DeferredItem<Item> GOLDEN_POTATO = ITEMS.register("golden_potato",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.GOLDEN_POTATO)));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GOLDEN_POTATO)){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.tutorialmod.golden_potato"));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> BLAZE_COAL = ITEMS.register("blaze_coal",
             () -> new FuelItem(new Item.Properties().stacksTo(16), 20000));

@@ -1,6 +1,9 @@
 {
+
  "creativetab.tutorialmod.tutorial_items": "Tutorial Items",
  "creativetab.tutorialmod.tutorial_blocks": "Tutorial Blocks",
+
+
 
  "item.tutorialmod.tin_ingot": "Tin Ingot",
  "item.tutorialmod.raw_tin": "Raw Tin",
@@ -9,9 +12,18 @@
  "item.tutorialmod.blaze_coal": "Blazing Coal",
  "item.tutorialmod.soul_fire_charge": "Soul Fire Charge",
 
+
+
  "block.tutorialmod.tin_block": "Block of Tin",
  "block.tutorialmod.tin_ore": "Tin Ore",
  "block.tutorialmod.deepslate_tin_ore": "Deepslate Tin Ore",
  "block.tutorialmod.raw_tin_block": "Block of Raw Tin",
- "block.tutorialmod.ender_annoyance": "Ender Annoyance"
+ "block.tutorialmod.ender_annoyance": "Ender Annoyance",
+
+
+
+ "tooltip.tutorialmod.ender_annoyance_block": "This is fucking §4§lannoying",
+ "tooltip.tutorialmod.chisel_item.shift_down": "§eRight-Click§r to chisel blocks",
+ "tooltip.tutorialmod.chisel_item_.shift_up": "To view press §eLeft Shift",
+ "tooltip.tutorialmod.golden_potato": "Somehow you only eat the gold"
 }

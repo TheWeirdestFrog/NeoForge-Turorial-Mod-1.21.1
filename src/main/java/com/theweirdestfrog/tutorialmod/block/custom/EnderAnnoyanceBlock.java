@@ -2,6 +2,7 @@ package com.theweirdestfrog.tutorialmod.block.custom;
 
 import com.theweirdestfrog.tutorialmod.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -12,6 +13,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -20,6 +22,8 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class EnderAnnoyanceBlock extends Block {
     public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
@@ -58,5 +62,12 @@ public class EnderAnnoyanceBlock extends Block {
         super.stepOn(level, pos, state, entity);
     }
 
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.tutorialmod.ender_annoyance_block"));
 
+
+
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+    }
 }
